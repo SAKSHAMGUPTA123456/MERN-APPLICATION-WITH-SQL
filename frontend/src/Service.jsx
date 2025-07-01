@@ -13,8 +13,8 @@ const response=await fetch('https://mern-application-with-sqlbackend.onrender.co
 })
 const gh=await response.json()
 if(response.ok){
-    console.log(gh.details[0])
-    newarray(gh.details[0])
+    console.log(gh.details)
+    newarray(gh.details)
 }
  }
 useEffect(()=>{
