@@ -12,7 +12,7 @@ app.use(errorMiddleware)
 app.get('/',(req,res)=>{
 res.status(200).send('welcome to admin router')
 })
-const port=1000
+const port=process.env.PORT||5000
 app.listen(port,()=>{
     console.log('hello server database connected  successfully')
 })
