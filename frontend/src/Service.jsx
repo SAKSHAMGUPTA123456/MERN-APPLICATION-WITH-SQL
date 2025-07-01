@@ -5,7 +5,7 @@ const Service=()=>{
     const [oldupdate,newupdate]=useState(true)
     const[oldarray,newarray]=useState([])
  const takebackendservices=async()=>{
-const response=await fetch('http://localhost:1000/home/services',{
+const response=await fetch('https://mern-application-with-sqlbackend.onrender.com/home/services',{
     method:"GET",
     headers:{
         "content-type":"application/json"
