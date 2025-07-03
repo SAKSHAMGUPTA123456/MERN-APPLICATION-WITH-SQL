@@ -23,13 +23,17 @@
 // module.exports = pool;
 require('dotenv').config();
 const { Pool } = require('pg');
+const dns = require('dns');
+
+dns.setDefaultResultOrder('ipv4first'); // ⬅️ Forces IPv4 over IPv6
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
   ssl: {
-    rejectUnauthorized: false, // works for Supabase, Neon, etc.
+    rejectUnauthorized: false,
   },
 });
 
 module.exports = pool;
+
 
