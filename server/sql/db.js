@@ -26,7 +26,9 @@ const { Pool } = require('pg');
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
-  ssl: false,  // explicitly disable SSL
+  ssl: {
+    rejectUnauthorized: false, // works for Supabase, Neon, etc.
+  },
 });
 
 module.exports = pool;
