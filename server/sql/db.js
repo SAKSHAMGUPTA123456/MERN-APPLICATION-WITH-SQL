@@ -10,14 +10,24 @@
 // });
 
 // module.exports = db.promise();
+// require('dotenv').config();
+// const { Pool } = require('pg');
+
+// const pool = new Pool({
+//   connectionString: process.env.DATABASE_URL,
+//   ssl: {
+//     rejectUnauthorized: false, // for Render cloud-hosted DB
+//   },
+// });
+
+// module.exports = pool;
 require('dotenv').config();
 const { Pool } = require('pg');
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
-  ssl: {
-    rejectUnauthorized: false, // for Render cloud-hosted DB
-  },
+  ssl: false,  // explicitly disable SSL
 });
 
 module.exports = pool;
+
