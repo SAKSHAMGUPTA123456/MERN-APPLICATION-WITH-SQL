@@ -18,7 +18,7 @@ const gh=e.target.value
 newdetails((prev)=>({...prev,[value2]:gh}))
 }
 const handleregister=async()=>{
-  const response=await fetch('https://mern-application-with-sqlbackend.onrender.com/home/register',{
+  const response=await fetch(' https://mern-application-with-sql.onrender.com/home/register',{
     method:"POST",
     headers:{
       "content-type":"application/json"
