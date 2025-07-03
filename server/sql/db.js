@@ -28,12 +28,15 @@ const dns = require('dns');
 dns.setDefaultResultOrder('ipv4first'); // ⬅️ Forces IPv4 over IPv6
 
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
+  host: 'db.gvwrsfrvaobuwkhuiwmf.supabase.co',
+  port: 5432,
+  user: 'postgres',
+  password: 'lolzzgaming123321',
+  database: 'postgres',
   ssl: {
     rejectUnauthorized: false,
   },
 });
-
 module.exports = pool;
 
 
